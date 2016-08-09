@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.techpalle.drivingsafetyfirst"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:icon="@drawable/driveicon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.techpalle.drivingsafetyfirst.Drive" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.techpalle.drivingsafetyfirst.MyService"
+            android:enabled="true" />
+
+        <activity android:name="com.techpalle.drivingsafetyfirst.Emergency" />
+        <activity android:name="com.techpalle.drivingsafetyfirst.AddFriends" />
+        <activity android:name="com.techpalle.drivingsafetyfirst.SavedContacts" />
+        <activity android:name="com.techpalle.drivingsafetyfirst.RecordVoiceMessage" />
+        <activity android:name="com.techpalle.drivingsafetyfirst.AddVehicle" />
+    </application>
+
+</manifest>
